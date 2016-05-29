@@ -100,6 +100,9 @@ int main(int argc, char *argv[])
     vocabulario.push_back(new Palabla("deve","DEBE",0,0));
     vocabulario.push_back(new Palabla("muxas","MUCHAS",0,0));
     vocabulario.push_back(new Palabla("aser","HACER",0,0));
+    vocabulario.push_back(new Palabla("ol@","HOLA",100,10);
+    vocabulario.push_back(new Palabla("felis","FELIZ",100,10);
+    vocabulario.push_back(new Palabla("tenprano","TEMPRANO",100,10);
     //Clean the previous log
     clearLog();
 
@@ -118,7 +121,7 @@ int main(int argc, char *argv[])
     vector<Palabla*> palabras;
 
 
-    Palabla *p = new Palabla("ol@","HOLA",100,10);
+
     palabras.push_back(p);
     int supuntos = 0;
     int tiempo=0;
