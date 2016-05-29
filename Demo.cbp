@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Font.cpp" />
+		<Unit filename="Font.h" />
 		<Unit filename="Rosalila/RosalilaAI/Automata.cpp" />
 		<Unit filename="Rosalila/RosalilaAI/Automata.h" />
 		<Unit filename="Rosalila/RosalilaAI/Estado.cpp" />

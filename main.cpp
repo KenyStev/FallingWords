@@ -83,16 +83,16 @@ int main(int argc, char *argv[])
 {
     srand (time(NULL));
     vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
-    vocabulario.push_back(new Palabla("","ESTOY",0,0));
-    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
-    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
-    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
-    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
-    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
-    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
-    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
-    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
-
+    vocabulario.push_back(new Palabla("aki","AQUI",0,0));
+    vocabulario.push_back(new Palabla("kiero","QUIERO",0,0));
+    vocabulario.push_back(new Palabla("etiketar","ETIQUETAR",0,0));
+    vocabulario.push_back(new Palabla("3rmosa","HERMOSA",0,0));
+    vocabulario.push_back(new Palabla("ermano","HERMANO",0,0));
+    vocabulario.push_back(new Palabla("savia","SABIA",0,0));
+    vocabulario.push_back(new Palabla("onduras","HONDURAS",0,0));
+    vocabulario.push_back(new Palabla("deve","DEBE",0,0));
+    vocabulario.push_back(new Palabla("muxas","MUCHAS",0,0));
+    vocabulario.push_back(new Palabla("aser","HACER",0,0));
     //Clean the previous log
     clearLog();
 
