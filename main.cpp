@@ -37,6 +37,8 @@ using namespace std;
 #endif
 
 #include "Font.h"
+#include <time.h>
+#include <stdlib.h>
 
 class Palabla{
 public:
@@ -67,8 +69,30 @@ public:
     }
 };
 
+vector<Palabla*> vocabulario;
+
+Palabla *generarPalabraRandom(int ancho_de_pantalla)
+{
+    int i  = rand()%vocabulario.size();
+    vocabulario[i]->x = rand()%ancho_de_pantalla;
+    vocabulario[i]->y = 0;
+    return vocabulario[i];
+}
+
 int main(int argc, char *argv[])
 {
+    srand (time(NULL));
+    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
+    vocabulario.push_back(new Palabla("","ESTOY",0,0));
+    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
+    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
+    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
+    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
+    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
+    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
+    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
+    vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
+
     //Clean the previous log
     clearLog();
 
