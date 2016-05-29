@@ -2,6 +2,6 @@
 	<ScreenSize x="1366" y="768"/>
 	<Resolution x="1366" y="768"/>
 	<Fullscreen enabled="no"/>
-	<Font red="0" green="0" blue="255" size="80"/>
+	<Font red="0" green="0" blue="255" size="50"/>
 
 </ConfigFile>
