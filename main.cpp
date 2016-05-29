@@ -39,6 +39,7 @@ using namespace std;
 #include "Font.h"
 #include <time.h>
 #include <stdlib.h>
+#include <vector>
 
 class Palabla{
 public:
@@ -69,19 +70,21 @@ public:
     }
 };
 
-vector<Palabla*> vocabulario;
-
-Palabla *generarPalabraRandom(int ancho_de_pantalla)
+Palabla *generarPalabraRandom(int ancho_de_pantalla,vector<Palabla*> *v)
 {
-    int i  = rand()%vocabulario.size();
-    vocabulario[i]->x = rand()%ancho_de_pantalla;
-    vocabulario[i]->y = 0;
-    return vocabulario[i];
+    int i = rand()%v->size();
+    cout<<"i: "<<i<<" p: "<<(*v)[i]->palabra.c_str()<<endl;
+    (*v)[i]->x = rand()%ancho_de_pantalla;
+    (*v)[i]->y = 0;
+    return (*v)[i];
 }
 
 int main(int argc, char *argv[])
 {
     srand (time(NULL));
+
+    vector<Palabla*> vocabulario;
+
     vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
     vocabulario.push_back(new Palabla("","ESTOY",0,0));
     vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
@@ -114,9 +117,11 @@ int main(int argc, char *argv[])
     Palabla *p = new Palabla("ol@","HOLA",100,10);
     palabras.push_back(p);
     int supuntos = 0;
+    int tiempo=0;
+
     while(true)
     {
-       rosalila_graphics->drawText(toString(supuntos),1300,30);
+        rosalila_graphics->drawText(toString(supuntos),1150,30);
         rosalila_graphics->drawText(text,100,rosalila_graphics->screen_height - 180);
 
         //guardar la palabra que escriba en la variable text
@@ -146,11 +151,21 @@ int main(int argc, char *argv[])
         {
             if(palabras[i]->esCorrecta(text))
             {
+                Palabla * p = palabras[i];
                 supuntos = supuntos + 2;
                 palabras.erase (palabras.begin()+i);
                 text = "";
+                delete p;
             }
         }
+
+        if(tiempo%80==0)
+        {
+            Palabla *p = generarPalabraRandom(rosalila_graphics->screen_width,&vocabulario);
+            palabras.push_back(new Palabla(p->palabra,p->palabra_correcta,p->x,p->y));
+        }
+
+        tiempo++;
 
         receiver->updateInputs();
         rosalila_graphics->updateScreen();
