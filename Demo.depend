@@ -1,0 +1,311 @@
+# depslib dependency file v1.0
+1464501584 source:/home/estevez/FallingWords/Font.cpp
+	"Font.h"
+
+1464501620 /home/estevez/FallingWords/Font.h
+	<iostream>
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaGraphics/RosalilaGraphics.h
+	<iostream>
+	<list>
+	"../system.h"
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2_image/SDL_image.h>
+	<SDL2_ttf/SDL_ttf.h>
+	"../TinyXml/tinyxml.h"
+	<GL/gl.h>
+	<stdio.h>
+	"../RosalilaGraphics/Image.h"
+	"../RosalilaGraphics/Timer.h"
+	"../RosalilaGraphics/Explosion.h"
+	"../RosalilaGraphics/Cube.h"
+	"../RosalilaGraphics/Object3D.h"
+	"../RosalilaUtility/RosalilaUtility.h"
+	<iostream>
+	<fstream>
+
+1464500886 /home/estevez/FallingWords/Rosalila/system.h
+	<iostream>
+
+1464500886 /home/estevez/FallingWords/Rosalila/TinyXml/tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/TinyXml/tinystr.h
+	<assert.h>
+	<string.h>
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaGraphics/Image.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/gl.h>
+	<stdio.h>
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaGraphics/Timer.h
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaGraphics/Explosion.h
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaGraphics/Cube.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaGraphics/Object3D.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+	<vector>
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaUtility/RosalilaUtility.h
+	<iostream>
+	<fstream>
+	<cmath>
+	<vector>
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaAI/Automata.cpp
+	"Automata.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaAI/Automata.h
+	"Estado.h"
+	"../TinyXml/tinyxml.h"
+	"../RosalilaUtility/RosalilaUtility.h"
+	<vector>
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaAI/Estado.h
+	"Transicion.h"
+	<cstdlib>
+	<iostream>
+	<vector>
+	"Estado.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaAI/Transicion.h
+	<map>
+	<vector>
+	<iostream>
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaAI/Estado.cpp
+	"Estado.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaAI/RosalilaAI.cpp
+	"RosalilaAI.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaAI/RosalilaAI.h
+	"Automata.h"
+	<cstdlib>
+	<iostream>
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaAI/Transicion.cpp
+	"Transicion.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaGraphics/Animation.cpp
+	"Animation.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaGraphics/Animation.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/gl.h>
+	<stdio.h>
+	"../TinyXml/tinyxml.h"
+	"RosalilaGraphics.h"
+	"../RosalilaSound/RosalilaSound.h"
+	"../RosalilaInputs/RosalilaInputs.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaSound/RosalilaSound.h
+	"../system.h"
+	<string>
+	<vector>
+	<iostream>
+	"SDL2/SDL.h"
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2_mixer/SDL_mixer.h>
+	"../RosalilaUtility/RosalilaUtility.h"
+	<map>
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaInputs/RosalilaInputs.h
+	"../system.h"
+	"../RosalilaInputs/Boton.h"
+	"../RosalilaAI/RosalilaAI.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaInputs/Boton.h
+	"../RosalilaInputs/Receiver.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaInputs/Receiver.h
+	<iostream>
+	<fstream>
+	<vector>
+	<stdarg.h>
+	"../TinyXml/tinyxml.h"
+	"SDL2/SDL.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaGraphics/Cube.cpp
+	"Cube.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaGraphics/Explosion.cpp
+	"Explosion.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaGraphics/Image.cpp
+	"RosalilaGraphics.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaGraphics/Object3D.cpp
+	"Object3D.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaGraphics/RosalilaGraphics.cpp
+	"RosalilaGraphics.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaGraphics/Timer.cpp
+	"SDL2/SDL.h"
+	"Timer.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaInputs/Boton.cpp
+	"Boton.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaInputs/Receiver.cpp
+	"RosalilaInputs.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaInputs/RosalilaInputs.cpp
+	"RosalilaInputs.h"
+	<sstream>
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaMenus/Elemento.cpp
+	"Elemento.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaMenus/Elemento.h
+	"../RosalilaGraphics/RosalilaGraphics.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuBarra.cpp
+	"MenuBarra.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuBarra.h
+	"Elemento.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuBoton.cpp
+	"MenuBoton.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuBoton.h
+	"Elemento.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuCharSelect.cpp
+	"MenuCharSelect.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuCharSelect.h
+	<vector>
+	"Elemento.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuContenedor.cpp
+	"MenuContenedor.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuContenedor.h
+	"Elemento.h"
+	"MenuLista.h"
+	"MenuBarra.h"
+	"MenuBoton.h"
+	"MenuImagen.h"
+	"MenuTexto.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuLista.h
+	<vector>
+	"Elemento.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuImagen.h
+	"Elemento.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuTexto.h
+	"Elemento.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuGallery.cpp
+	"MenuGallery.h"
+
+1464500886 /home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuGallery.h
+	<vector>
+	"Elemento.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuImagen.cpp
+	"MenuImagen.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuLista.cpp
+	"MenuLista.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaMenus/MenuTexto.cpp
+	"MenuTexto.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaNetwork/RosalilaNetwork.cpp
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaSound/RosalilaSound.cpp
+	"RosalilaSound.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/RosalilaUtility/RosalilaUtility.cpp
+	"RosalilaUtility.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/TinyXml/tinystr.cpp
+	"tinystr.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/TinyXml/tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/TinyXml/tinyxmlerror.cpp
+	"tinyxml.h"
+
+1464500886 source:/home/estevez/FallingWords/Rosalila/TinyXml/tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1464551018 source:/home/estevez/FallingWords/main.cpp
+	<GL/gl.h>
+	<stdio.h>
+	"Rosalila/system.h"
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<sstream>
+	<string>
+	<iostream>
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2_image/SDL_image.h>
+	<SDL2_ttf/SDL_ttf.h>
+	<SDL2_mixer/SDL_mixer.h>
+	"Font.h"
+	<time.h>
+	<stdlib.h>
+	<vector>
+

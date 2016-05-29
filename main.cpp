@@ -100,9 +100,10 @@ int main(int argc, char *argv[])
     vocabulario.push_back(new Palabla("deve","DEBE",0,0));
     vocabulario.push_back(new Palabla("muxas","MUCHAS",0,0));
     vocabulario.push_back(new Palabla("aser","HACER",0,0));
-    vocabulario.push_back(new Palabla("ol@","HOLA",100,10);
-    vocabulario.push_back(new Palabla("felis","FELIZ",100,10);
-    vocabulario.push_back(new Palabla("tenprano","TEMPRANO",100,10);
+    vocabulario.push_back(new Palabla("ol@","HOLA",100,10));
+    vocabulario.push_back(new Palabla("felis","FELIZ",100,10));
+    vocabulario.push_back(new Palabla("tenprano","TEMPRANO",100,10));
+    vocabulario.push_back(new Palabla("tanpoco","TAMPOCO",100,10));
     //Clean the previous log
     clearLog();
 
@@ -122,12 +123,27 @@ int main(int argc, char *argv[])
 
 
 
-    palabras.push_back(p);
+
     int supuntos = 0;
     int tiempo=0;
+    Image *image=rosalila_graphics->getTexture(assets_directory+"FALLING WORDSG-01.png");
+    int velocidad=120;
+
 
     while(true)
     {
+        rosalila_graphics->draw2DImage
+        (   image,
+            image->getWidth(),image->getHeight(),
+            0,0,
+            1,
+            0,
+            false,
+            0,0,
+            Color(255,255,255,255),
+            0,0,
+            false);
+
         rosalila_graphics->drawText(toString(supuntos),1150,30);
         rosalila_graphics->drawText(text,100,rosalila_graphics->screen_height - 180);
 
@@ -166,11 +182,23 @@ int main(int argc, char *argv[])
             }
         }
 
-        if(tiempo%80==0)
+        if(tiempo%velocidad==0)
         {
             Palabla *p = generarPalabraRandom(rosalila_graphics->screen_width,&vocabulario);
             palabras.push_back(new Palabla(p->palabra,p->palabra_correcta,p->x,p->y));
         }
+
+        if(supuntos==50)
+
+        {
+            image=rosalila_graphics->getTexture(assets_directory+"FALLING WORDSG-02.png");
+            velocidad=100;
+        }
+
+        if(supuntos==100)
+        {
+            velocidad=80;
+            }
 
         tiempo++;
 
