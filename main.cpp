@@ -38,6 +38,35 @@ using namespace std;
 
 #include "Font.h"
 
+class Palabla{
+public:
+    int x, y;
+    string palabra,palabra_correcta;
+    Font *f;
+
+    Palabla(string palabra1,string palabra_correcta1,int x1, int y1)
+    {
+        f = new Font("font.ttf");
+        x = x1;
+        y = y1;
+        palabra = palabra1;
+        palabra_correcta = palabra_correcta1;
+        f->setColor(255,255,255);
+        f->setSize(25);
+    }
+
+    void dibujar()
+    {
+        f->drawText(palabra,x,y);
+        y++;
+    }
+
+    bool esCorrecta(string p)
+    {
+        return strcmp(palabra_correcta.c_str(),p.c_str()) == 0;
+    }
+};
+
 int main(int argc, char *argv[])
 {
     //Clean the previous log
@@ -50,17 +79,50 @@ int main(int argc, char *argv[])
     RosalilaGraphics* rosalila_graphics = new RosalilaGraphics();
     rosalila_graphics->video(rosalila_graphics);
 
-    float x=0;
-    float y=0;
-    float size=10;
+    //buffer de palabra entrante
+    string text = "";
 
-    Font *miPalabra = new Font("font.ttf");
-    miPalabra->setColor(255,255,255);
-    miPalabra->setSize(10);
+    //vector de palabras
+    vector<Palabla*> palabras;
+
+    Palabla *p = new Palabla("ol@","HOLA",100,10);
+    palabras.push_back(p);
 
     while(true)
     {
-        miPalabra->drawText("Hola",100,10);
+        rosalila_graphics->drawText(text,100,rosalila_graphics->screen_height - 180);
+
+        //guardar la palabra que escriba en la variable text
+        for(int i=0; i<26;i++)
+        {
+            if(receiver->isKeyPressed(i+97))
+            {
+                char c = i+65;
+                text+=c;
+            }
+            if(receiver->isKeyPressed(SDLK_SPACE)){
+                text +=" ";
+            }
+        }
+        if(receiver->isKeyPressed(SDLK_BACKSPACE)){
+                    text ="";
+        }
+
+        //dinuja todas las palabras que tiene el vector
+        for(int i=0; i<palabras.size();i++)
+        {
+            palabras[i]->dibujar();
+        }
+
+        //evalua si la palabra escrita es correcta con algua de las palabras del vector
+        for(int i=0; i<palabras.size();i++)
+        {
+            if(palabras[i]->esCorrecta(text))
+            {
+                p->palabra = "Correcta";
+                text = "";
+            }
+        }
 
         receiver->updateInputs();
         rosalila_graphics->updateScreen();
