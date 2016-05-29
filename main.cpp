@@ -100,9 +100,9 @@ int main(int argc, char *argv[])
     vocabulario.push_back(new Palabla("deve","DEBE",0,0));
     vocabulario.push_back(new Palabla("muxas","MUCHAS",0,0));
     vocabulario.push_back(new Palabla("aser","HACER",0,0));
-    vocabulario.push_back(new Palabla("ol@","HOLA",100,10);
-    vocabulario.push_back(new Palabla("felis","FELIZ",100,10);
-    vocabulario.push_back(new Palabla("tenprano","TEMPRANO",100,10);
+    vocabulario.push_back(new Palabla("ol@","HOLA",100,10));
+    vocabulario.push_back(new Palabla("felis","FELIZ",100,10));
+    vocabulario.push_back(new Palabla("tenprano","TEMPRANO",100,10));
     //Clean the previous log
     clearLog();
 
@@ -120,56 +120,73 @@ int main(int argc, char *argv[])
     //vector de palabras
     vector<Palabla*> palabras;
 
-
-
-    palabras.push_back(p);
+    bool perdio = false;
     int supuntos = 0;
-    int tiempo=0;
+    int tiempo = 0;
+    int vidas = 5;
+
+//    cout<<"h: "<<rosalila_graphics->screen_height<<" w: "<<rosalila_graphics->screen_width<<endl;
+//    exit(0);
 
     while(true)
     {
         rosalila_graphics->drawText(toString(supuntos),1150,30);
         rosalila_graphics->drawText(text,100,rosalila_graphics->screen_height - 180);
-
-        //guardar la palabra que escriba en la variable text
-        for(int i=0; i<26;i++)
+        if(!perdio)
         {
-            if(receiver->isKeyPressed(i+97))
+
+            //guardar la palabra que escriba en la variable text
+            for(int i=0; i<26;i++)
             {
-                char c = i+65;
-                text+=c;
+                if(receiver->isKeyPressed(i+97))
+                {
+                    char c = i+65;
+                    text+=c;
+                }
+                if(receiver->isKeyPressed(SDLK_SPACE)){
+                    text +=" ";
+                }
             }
-            if(receiver->isKeyPressed(SDLK_SPACE)){
-                text +=" ";
+            if(receiver->isKeyPressed(SDLK_BACKSPACE)){
+                        text ="";
+                        vidas--;
             }
-        }
-        if(receiver->isKeyPressed(SDLK_BACKSPACE)){
-                    text ="";
-        }
 
-        //dinuja todas las palabras que tiene el vector
-        for(unsigned int i=0; i<palabras.size();i++)
-        {
-            palabras[i]->dibujar();
-        }
 
-        //evalua si la palabra escrita es correcta con algua de las palabras del vector
-        for(unsigned int i=0; i<palabras.size();i++)
-        {
-            if(palabras[i]->esCorrecta(text))
+            //dinuja todas las palabras que tiene el vector
+            for(unsigned int i=0; i<palabras.size();i++)
             {
-                Palabla * p = palabras[i];
-                supuntos = supuntos + 2;
-                palabras.erase (palabras.begin()+i);
-                text = "";
-                delete p;
+                palabras[i]->dibujar();
             }
-        }
 
-        if(tiempo%80==0)
-        {
-            Palabla *p = generarPalabraRandom(rosalila_graphics->screen_width,&vocabulario);
-            palabras.push_back(new Palabla(p->palabra,p->palabra_correcta,p->x,p->y));
+            //evalua si la palabra escrita es correcta con algua de las palabras del vector
+            for(unsigned int i=0; i<palabras.size();i++)
+            {
+                if(palabras[i]->y > rosalila_graphics->screen_height + 10){
+                    Palabla * p = palabras[i];
+                    palabras.erase(palabras.begin() + i);
+                    vidas--;
+                    delete p;
+                }else if(palabras[i]->esCorrecta(text))
+                {
+                    Palabla * p = palabras[i];
+                    supuntos = supuntos + 2;
+                    palabras.erase (palabras.begin()+i);
+                    text = "";
+                    delete p;
+                }
+            }
+
+            if(tiempo%80==0)
+            {
+                Palabla *p = generarPalabraRandom(rosalila_graphics->screen_width,&vocabulario);
+                palabras.push_back(new Palabla(p->palabra,p->palabra_correcta,p->x,p->y));
+            }
+
+            if(vidas<=0)
+                perdio=true;
+        }else{
+            text = "GAME OVER";
         }
 
         tiempo++;
