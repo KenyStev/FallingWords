@@ -23,6 +23,8 @@ Font::Font(string path)
         writeLogLine("Could not init font. Place it on /misc/font.ttf .");
     }
 
+    font_size=10;
+
     textColor.r = 255;
     textColor.g = 255;
     textColor.b = 255;

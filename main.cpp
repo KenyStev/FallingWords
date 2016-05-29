@@ -103,17 +103,20 @@ int main(int argc, char *argv[])
     RosalilaGraphics* rosalila_graphics = new RosalilaGraphics();
     rosalila_graphics->video(rosalila_graphics);
 
+
     //buffer de palabra entrante
     string text = "";
 
     //vector de palabras
     vector<Palabla*> palabras;
 
+
     Palabla *p = new Palabla("ol@","HOLA",100,10);
     palabras.push_back(p);
-
+    int supuntos = 0;
     while(true)
     {
+       rosalila_graphics->drawText(toString(supuntos),1300,30);
         rosalila_graphics->drawText(text,100,rosalila_graphics->screen_height - 180);
 
         //guardar la palabra que escriba en la variable text
@@ -133,17 +136,18 @@ int main(int argc, char *argv[])
         }
 
         //dinuja todas las palabras que tiene el vector
-        for(int i=0; i<palabras.size();i++)
+        for(unsigned int i=0; i<palabras.size();i++)
         {
             palabras[i]->dibujar();
         }
 
         //evalua si la palabra escrita es correcta con algua de las palabras del vector
-        for(int i=0; i<palabras.size();i++)
+        for(unsigned int i=0; i<palabras.size();i++)
         {
             if(palabras[i]->esCorrecta(text))
             {
-                p->palabra = "Correcta";
+                supuntos = supuntos + 2;
+                palabras.erase (palabras.begin()+i);
                 text = "";
             }
         }
