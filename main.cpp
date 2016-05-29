@@ -83,6 +83,10 @@ int main(int argc, char *argv[])
 {
     srand (time(NULL));
 
+    Sound *music = new Sound();
+    music->addSound("musica",assets_directory+"mini_game_theme_v3.ogg");
+    music->playSound("musica");
+
     vector<Palabla*> vocabulario;
 
     vocabulario.push_back(new Palabla("3ztoy","ESTOY",0,0));
