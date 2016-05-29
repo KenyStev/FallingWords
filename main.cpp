@@ -50,9 +50,9 @@ int main(int argc, char *argv[])
     RosalilaGraphics* rosalila_graphics = new RosalilaGraphics();
     rosalila_graphics->video(rosalila_graphics);
 
-    float x=0;
-    float y=0;
-    float size=10;
+//    float x=0;
+//    float y=0;
+//    float size=10;
 
     Font *miPalabra = new Font("font.ttf");
     miPalabra->setColor(255,255,255);
